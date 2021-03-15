@@ -1,6 +1,6 @@
 # Python Projects
 
-As I mentioned in the initial page, my Python projects are more personal hobbies that I used in order to practice and learn the language. Here I am sharing three personal projects that will link to the individual code as well as more substantial explanations. Enjoy!
+As I mentioned in the initial page, my Python projects are more personal hobbies that I used in order to practice and learn the language. Here I am sharing three personal projects that will link to their individual codes as well as more substantial explanations. Many thanks to Al Sweigart's Automate the Boring Stuff as well as the online community for helping me throughout various coder's block. Enjoy!
 
 ## 1: Automate Baseball Lineup and Pitch Count
 I work part time with a youth baseball team and have been consulting with the coaches on how to develop a lineup and track how many pitches a kid can throw under youth baseball recommended guidelines. This program is designed to allow coaches to spend less time making subjective lineup decisions and more time managing the game and helping the kids perform to their potential.
