@@ -4,7 +4,7 @@ As mentioned before, this project's goal is to automatically update an Excel spr
 ## EPL ID Grabber
 First, I had to know this type of project was possible. After quickly browsing the web site , I realized that the format of the website was www.whoscored.com/Players/######/Show/Player-Name where ###### is a unique identification number (UIN). After a quick check, I realized that I could access the player page by just using the www.whoscored.com/Players/######. 
 
-So, my first idea was set--I had to see if I could collect the ID number for each of the Premier League Players. I figured if I could collect this, I could use the UIN in our spreadsheet to match and update the appropriate statistics. There is a page on WhoScored where I could select the Player ID from the html. There were 51 pages on the table so I iterated over the table and clicked next page 51 times. 
+So, my first idea was set--I had to see if I could collect the UIN for each of the Premier League Players. I figured if I could collect this, I could use the UIN in our spreadsheet to match and update the appropriate statistics. There is a page on WhoScored where I could select the Player ID from the html. There were 51 pages on the table so I iterated over the table and clicked next page 51 times. 
 Here is the code:
 ```ruby
 ## General
