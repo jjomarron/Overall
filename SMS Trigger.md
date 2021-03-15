@@ -1,5 +1,5 @@
 # SMS Trigger Overview
-This project originally came out of my Youth Baseball project and the desire for each coach to be able to access their own lineup and pitcher info quickly and without my oversight. As it is a part time job, I know that I will not always be accessible when the coaches want their data. The more I could automate the process, the less it would rely on me and the better the organization could be!
+This project originally came out of my [Automate Baseball Lineup and Pitch Count](WebScrape.md) project and the desire for each coach to be able to access their own lineup and pitcher info quickly and without my oversight. As it is a part time job, I know that I will not always be accessible when the coaches want their teams' data. The more I could automate the process, the less it would rely on me and the better the organization could be!
 
 ## Inspiration/Foundation
 Ultimately, this code borrowed heavily from Javed Shaikh's informative [blog post](https://shaikhu.com/how-to-trigger-a-job-or-program-from-anywhere-with-a-sms). A million thanks to him for sharing his expertise. My departures from his code were just personalizing it to my own needs but ultimately this was the most complete explanation I found to devise an SMS trigger for a Python script without paying extra for a platform like WayScript.
