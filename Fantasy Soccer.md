@@ -90,7 +90,8 @@ As you can see in the picture below, I was able to successfully return an ID for
 ## Auto Update Initial Check
 In this part, I wanted to prove I could access the stats so I kept the first 9 names from the test.csv file that I had gather the EPL IDs. The result is here below:
 
-![image](https://user-images.githubusercontent.com/80477575/111106962-07234180-8524-11eb-82d0-74a5de8afa47.png)
+![image](https://user-images.githubusercontent.com/80477575/111106962-07234180-8524-11eb-82d0-74a5de8afa47.png) ![image](https://user-images.githubusercontent.com/80477575/111107580-19ea4600-8525-11eb-870f-b3d757b7419f.png)
+
 
 I was able to succesfully populate the table! However, this was only for the most recent game played which means that I would still run into problems as game weeks are played out of order.
 
