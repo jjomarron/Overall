@@ -38,10 +38,10 @@ browser.get('https://gc.com')
 browser.find_element_by_css_selector(".gcButtonSmall").click()
 
 ElemE = browser.find_element_by_css_selector('#email')
-ElemE.send_keys('jackjomarron@gmail.com')
+ElemE.send_keys('*************')
 
 ElemP = browser.find_element_by_css_selector('#login_password')
-ElemP.send_keys('Lphs2014!')
+ElemP.send_keys('*************')
 ElemP.submit()
 
 browser.find_element_by_css_selector(".teamsLink").click()
