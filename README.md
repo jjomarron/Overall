@@ -1,4 +1,4 @@
-Hi everyone, welcome to my GitHub! This is my first attempt at creating a repository where I can share my code, elicit feedback, and hopefully pass on what I have learned with others.
+Hi everyone, welcome to my GitHub! This is my first attempt at creating a repository where I can share my code, solicit feedback, and hopefully pass on what I have learned with others.
 
 # [About Me](https://www.linkedin.com/in/jackjomarron/)
 
