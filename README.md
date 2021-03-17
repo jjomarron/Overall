@@ -53,11 +53,7 @@ I learned R in the same graduate level class where I learned SAS. We spent less 
 
 -text-
 
-**2: [Something Else](.md)**
-
--text-
-
-**3: [Something Else 2](.md)**
+**2: [Regression Analysis](.md)**
 
 -text-
 
