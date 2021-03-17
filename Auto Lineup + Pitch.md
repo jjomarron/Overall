@@ -174,7 +174,7 @@ textfile = open('C:\\Users\\Jack\\Documents\\Work\\Chicago Stars\\Python.Line Up
 textfile.write(final)
 textfile.close()
 ```
-Here you can see the final result (certain information blocked out to protect identities):
+Here you can see the final result combined with my [SMS Trigger Project](SMS Trigger.md)(certain information blocked out to protect identities):\
 ![image](https://user-images.githubusercontent.com/80477575/111109312-8581e280-8528-11eb-939e-da981cda2a1d.png)
 
 ## Moving Forward
