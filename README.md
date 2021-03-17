@@ -51,7 +51,7 @@ My experience in SAS comes from a graduate level class where we learned about va
 -text-
 
 ## R (incomplete)
-I also learned R in the same graduate level class where I learned SAS. We spent less time on R but again adjusting to the syntax was just a learning curve that I felt comfortable overcoming. I have spent less time on R so I move slower in this language than I do in STATA or SAS but I would love to spend some more time increasing my fluency and take advantage of all that R has to offer.
+I learned R in the same graduate level class where I learned SAS. We spent less time on R but again adjusting to the syntax was just a learning curve that I felt comfortable overcoming. I have spent less time on R so I move slower in this language than I do in STATA or SAS but I would love to spend some more time increasing my fluency and take advantage of all that R has to offer.
 
 **1: [Machine Learning](.md)**
 
