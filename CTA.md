@@ -4,6 +4,8 @@ This project was developed in my Public Sector Economics graduate class at DePau
 ## Overview
 This project came out of personal interest for me inspired by a few changes I had witnessed. After two years away in the Peace Corps, I came back to see some of the familiar places I had known and loved in Chicago had been transformed and gentrified. I saw people not as familiar with the transit system as Ubers and Lyfts became more popular. I also was personally affected by cuts to our transit system in high school. I knew these changes were not happening in silos so I wanted to explore the relationship between rideshares, demographics, and Chicago Transit Authority (CTA) ridership as a proxy or initial understanding of how gentrification might be affecting our transit system.
 
+Jump to [Results](#Takeaways)
+
 ## Key facts/concepts to know (Tableau graphs to be included later)
 * Real median income has trended down in Chicago over the last 20 years
 * Chicago's Black population has decreased substantially since 2000
@@ -18,8 +20,7 @@ This project came out of personal interest for me inspired by a few changes I ha
 My driving research question was: **How have rideshares and demographic changes affected CTA ridership?** After determining those impacts, I also wanted to explore how certain neighborhoods might have been affected in order to understand the shifts in equity behind any of the ridership effects.
 
 ## Data Collection and Cleaning
-For this project, I compiled a unique dataset utilizing the City of Chicago Data Portal, the American Community Survey, and CTA's annual Budget Recommendations. Data collection was more laborious than data cleaning which I will explore in this section. My data cleaning and compilation codes are available at the end of this section.
-<sub>I had intended to use the robust rideshare data that Chicago now collects but unfortunately it did not cover the rise of rideshares in the city. So, instead I had to use indicator variables for both Uber and Lyft's launch date in Chicago in my regression model.</sub>
+For this project, I compiled a unique dataset utilizing the City of Chicago Data Portal, the American Community Survey, and CTA's annual Budget Recommendations. Data collection was more laborious than data cleaning which I will explore in this section. My data cleaning and compilation codes are available at the end of this section. I had intended to use the robust rideshare data that Chicago now collects but unfortunately it did not cover the rise of rideshares in the city. So, instead I used indicator variables for both Uber and Lyft's launch date in Chicago in my regression model.
 
 ### City of Chicago Data Portal
 The City of Chicago Data Portal's CTA Daily Boarding Totals and L-station Daily Boarding Totals made up the bulk of my dataset. CTA Daily Boarding Totals is an aggregate count of all the rides taken in a day, split between bus and train. This was useful in identifying the difference in effects between train and bus. The L-station Daily Boarding Totals was strictly train rides split by each train station. I grouped the stations by area of the city (more on this split later) to help understand how different parts of the city might have been affected at least by train. Unfortunately, the bus data was not available.
@@ -92,25 +93,41 @@ Ultimately, there is a lot that might affect CTA ridership so I considered each 
 
 ### Bus and Train
 
+From the initial regression output below, we can identify a few interesting points:
+
+* As the percentage of the white population increased by 1%, we saw total daily ridership decline by almost 75,000 (about 5%).
+  * This was particularly acute on the bus where the majority of the 5% loss of riders occurred
+* The introduction of rideshares had a net decrease in daily ridership totals of about 30,000 rides (around 2%)
+* The other variables more or less coincided with existing literature and my own hypotheses.
+* Daily difference in adjusted bus fare had an extremely high magnitude but this was because the daily difference was almost 0. There has not been a $1 daily change in bus fare that would reflect these high levels. However, the coefficient being significant and positive suggests that bus fares increasing are not deterring people from riding either the train or the bus.
+
 ![image](https://user-images.githubusercontent.com/80477575/111395419-d3aef700-868a-11eb-98d0-313c7975cbca.png)
 
 ### Train Ridership by Neighborhood
 
+These results come from a similar model to the previous section except this time the dependent variable is strictly train rides. Furthermore, I split the data up by location of the train stop into 9 different sections. By breaking down the data like this, we can see where the differences in train ridership are most acute.
+
 ![image](https://user-images.githubusercontent.com/80477575/111395447-dd385f00-868a-11eb-8967-30d3d98101d1.png)
 
+* Downtown, Near North and Near South all saw an increase in train ridership after the rideshares were introduced
+  * This supports rideshare advocates as they claim people take Ubers to public transit and actually increase ridership
+*  On the South and West sides of Chicago, we see train ridership remain the same or actually decrease across the same rideshare and demographic variables
+  * This supports rideshare critics' arguments as they claim rideshares are sapping away resources and riders from public transit system
+ 
 ## Takeaways
-* Increased ridership has many positive benefits
-  * Environmental, cultural, equitable, etc.
-* If we can better identify why ridership is declining, we can better fix lagging ridership
-* How policy choices in different areas might affect public transportation
-  * Death spiral
 
+This project highlights the familiar story of how the same occurence does not impact all Chicagoans equally. According to the results, rideshares and the increased white population are causing a crisis-level decline in daily bus rides (~15%). While trains are managing a modest increase, the hit to bus rides is worrisome as it portends a "death spiral" if the fares collected keep declining. Furthermore, while we see downtown and its surrounding neighborhoods (as well as its predominantly white ones) benefit from rideshares and increased ridership, it is Chicago's West and South sides that are losing train riders. 
 
+Beyond just identifying where and what trends exist in relation to CTA ridership, these results call in to question policy choices that are external to public transportation. Since Rahm Emanuel became mayor, the city has catered more and more to business interests and young, urban professionals. This pro-business drive has undoubtedly contributed to a demographic shift in the city that has resulted in more white professionals who are generally more comfortable taking an Uber than they are riding the CTA. In order to correctly evaluate development decisions and gentrification, it is imperative that the city considers the public transit impacts as well. 
 
 ## Gaps and Further Questions
-* Crime data on the CTA
+
+To further improve on my research, I identified the following areas where gaps existed or required further questions
+
+* There is a lack of tracking crime data on the CTA which could affect rider sentiment and ridership numbers
 * Rideshare regressors are just indicator variables
-  * Model would benefit from ride counts per day, especially growth over time
-* Expand on Neighborhood Analysis
-  * Cluster based on key variables (income, demographics, etc.)
-  * Bus ridership
+  * The model would benefit from ride counts per day, especially growth over time
+  * This does not seem possible as Uber and Lyft only reported numbers after the city required them to and after their initial adoption occurred
+* I also would like to expand on the beighborhood analysis I conducted
+  * I could apply cluster analysis based on key variables (income, demographics, etc.) to more accurately define neighborhood effects
+  * Unfortunately there is not daily bus ride totals by stop. This would be very helpful in determining where the largest loss of bus riders is occurring
