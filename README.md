@@ -38,17 +38,13 @@ This project is going in tandem with my growing list of Python projects as well 
 ## SAS (incomplete)
 My experience in SAS comes from a graduate level class where we learned about various analytic tools. My takeup on SAS was much quicker than other languages as I had already completed the requisite STATA/Econometrics courses so it was easy adjusting to the syntax. However, I also learned to use SAS to create Neural Network models, utilize machine learning techniques, as well as clustering analysis. 
 
-**1: [Machine Learning](.md)**
+**1: [Regression Analysis](SAS Regression.md)**
 
--text
+Here is a code I wrote that runs some simple regressions and works on fitting models. I use Adjusted R-Squared, stepwise regressions to develop my own best model. I also evaluate all the different models using key statistics such as mean squared error, root mean squared error, and more.
 
-**2: [Clustering Analysis](.md)**
+**2: [Clustering Analysis](Cluster Analysis.md)**
 
 This code comes from a homework assignment where I conducted a clustering analysis to help identify subsets of Big Data to eventually apply other analysis methods to discover meaningful conclusions from large datasets.
-
-**3: [Neural Networks](.md)**
-
--text-
 
 ## R (incomplete)
 I learned R in the same graduate level class where I learned SAS. We spent less time on R but again adjusting to the syntax was just a learning curve that I felt comfortable overcoming. I have spent less time on R so I move slower in this language than I do in STATA or SAS but I would love to spend some more time increasing my fluency and take advantage of all that R has to offer.
