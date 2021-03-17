@@ -20,7 +20,7 @@ This is not a perfect calculation but we have a limited sample size, large perfo
 Another issue in youth baseball is pitch counts. Overuse can lead to long-term issues. Teams and leagues are looking to limit this by putting in weekly pitch limits. However, keeping track of these game to game is not always easily done. In order to preserve the integrity of our players' arms, I wanted to include a pitch counting segment that would allow coaches to know how many pitches they could plan for each player before the game started. This would allow coaches to create better plans and contingencies while also protecting our players. This process eliminates human error, keeps us in line with league protocol, and provides accountability to our coaches and their players.
 
 ## Code
-```ruby
+```python
 ## General
 import time
 import shutil, os
@@ -174,6 +174,9 @@ textfile = open('C:\\Users\\Jack\\Documents\\Work\\Chicago Stars\\Python.Line Up
 textfile.write(final)
 textfile.close()
 ```
+Here you can see the final result (certain information blocked out to protect identities):
+![image](https://user-images.githubusercontent.com/80477575/111109312-8581e280-8528-11eb-939e-da981cda2a1d.png)
+
 ## Moving Forward
 * I need to globalize this code for each of our ~10 teams
 * I need to make sure the file path naming conventions are consistent
