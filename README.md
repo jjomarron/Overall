@@ -65,5 +65,5 @@ I learned R in the same graduate level class where I learned SAS. We spent less 
 
 -text-
 
-## Tableau (incomplete)
-Tableau has been super helpful for me in crafting data visualizations particularly within larger data analysis projects that I have worked on. I enrolled in a free online course as an introduction basic Tableau and have then used it start creating visualizations including various different types of graphs, trend lines, and confidence intervals. I worked for the State of Illinois where I was writing weekly reports that required Tableau graphs. While most of the graphs were already set, I did provide input and make minor adjustments as well as learned more about the inner workings of Tableau and the auto-update capabilities. 
+<!--## Tableau (incomplete)
+Tableau has been super helpful for me in crafting data visualizations particularly within larger data analysis projects that I have worked on. I enrolled in a free online course as an introduction basic Tableau and have then used it start creating visualizations including various different types of graphs, trend lines, and confidence intervals. I worked for the State of Illinois where I was writing weekly reports that required Tableau graphs. While most of the graphs were already set, I did provide input and make minor adjustments as well as learned more about the inner workings of Tableau and the auto-update capabilities. -->
