@@ -10,11 +10,11 @@ STATA is my strongest data analysis language, where I have spent the majority of
 
 **1: [Doors Closing: How Have Rideshares and Demographic Changes Affected CTA Ridership](CTA.md)**
 
-My most substantial project was a research paper evaluating how rideshares (Uber and Lyft) and demographic changes affected CTA ridership. In this project, I delved into the City of Chicago Data Portal where I utilized their Big datasets on rideshares as well as the ones regarding CTA ridership. With regression analysis, I was able to identify how gentrification (using rideshares and demographic changes) was contributing to a decrease in overall ridership as well as a shift in how Chicagoans were transporting themselves.
+My most substantial project was a research paper evaluating how rideshares (Uber and Lyft) and demographic changes affected CTA ridership. In this project, I delved into the City of Chicago Data Portal where I utilized their Big datasets on rideshares as well as the ones regarding CTA ridership. With regression analysis, I was able to identify how gentrification (using rideshares and demographic changes as proxies) contributed to a decrease in overall ridership as well as a shift in how Chicagoans were transporting themselves.
 
 **2: [Data Cleaning](Clean Crime.md)**
 
-This example is how I cleaned and compiled various datasets  used in a final project during my Master's program. My research partners and I were evaluating the effectiveness of the Chicago Police Department's stops on the amount of crimes on a neighborhood. I took point on cleaning and compiling the datasets so we could conduct machine learning and other more advanced analysis in R.
+This example is how I cleaned and compiled various datasets used in a final project during my Master's program. My research partners and I were evaluating the effectiveness of the Chicago Police Department's stops on the amount of crimes on a neighborhood. I took point on cleaning and compiling the datasets so we could conduct machine learning and other more advanced analysis in R. This was cleaning included datasets from Chicago Police Department and the City of Chicago's Data Portal.
 
 **3: [Time Series and ARIMA models](.md)**
 
