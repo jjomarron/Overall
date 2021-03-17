@@ -35,7 +35,7 @@ A group of friends and I are in a personally operated Fantasy Soccer League that
 
 This project is going in tandem with my growing list of Python projects as well as future ones. I am planning on building a server where I will host all my Python scripts so I do not have to use my daily computer to run scripts. With this script, my friends can also update their fantasy teams, youth coaches can request their lineup and pitch count info on their terms, and I can run any codes while away from my computer.
 
-## SAS (incomplete)
+## SAS
 My experience in SAS comes from a graduate level class where we learned about various analytic tools. My takeup on SAS was much quicker than other languages as I had already completed the requisite STATA/Econometrics courses so it was easy adjusting to the syntax. However, I also learned to use SAS to create Neural Network models, utilize machine learning techniques, as well as clustering analysis. 
 
 **1: [Regression Analysis](SAS Regression.md)**
