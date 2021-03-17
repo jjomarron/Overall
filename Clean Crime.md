@@ -5,9 +5,12 @@ I will be highlighting certain parts of the code to share particular insights bu
 
 The goal of this cleaning was to end with a dataset that had counts for violent crimes, stops, and demographic data by year and zip code.
 
+Jump to [Before and After](#Before-and-After) comparison.
+
 ## CPD Stops Data
 
-In this section, I cleaned the first year (2016) of stop data. I ended up running the exact script for each year so I am only sharing the first year for the sake of conciseness. 
+In this section, I cleaned the first year (2016) of stop data. I ended up running nearly the same script for each year so I am only sharing the first year for the sake of conciseness. Ideally, I would have been able to run a loop and shorten my code significantly but due to the messy nature of the data and the overlapping time periods, I had to run the a nearly identical code except for some date changes and different file path names. I believe a loop would be possible especially if I renamed file paths but for the sake of accuracy I decided against running a loop.
+
 
 I first looked through key data points and found that a fair amount of the information was redacted. Since this information was not available, I had no choice but to drop the observations that were redacted. This was a consideration in our data analysis because a significant percentage of the observations were redacted which might limit the efficacy of our analysis.
 
@@ -19,7 +22,6 @@ I also cleaned and converted the date variables which were not in the correct fo
 
 Finally, I had to convert all the categorical variables which were provided in Y/N format. I converted them to the numerical 1/0 format in order to evaluate them in trend or regression analysis. 
 
-Ideally, I would have been able to run a loop and shorten my code significantly but due to the messy nature of the data and the overlapping time periods, I had to run the same code and adjust for the file path names. To avoid this, I might have renamed the file paths in STATA and then been able to run a loop but I wanted to be prioritize accuracy.
 
 Skip code to [next comments](#Appending-Loop)
 
@@ -368,24 +370,25 @@ export delimited using "C:\Users\Jack\Documents\School\Business Analytics.520\Fi
 The datasets are too large to share on GitHub directly but are available for public download:
 
 [Here](https://home.chicagopolice.org/statistics-data/isr-data/) for the Stops Data.
+
 [Here](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2) for the Crime Data.
 
 
 Here are screenshots of the untouched original datasets:
-Stop Year 2016
+
+Stop Year 2016 (132,000 observations)
 
 ![image](https://user-images.githubusercontent.com/80477575/111401468-58077700-8697-11eb-8610-08799251e5ad.png)
 
-Stop Year 2017
+Stop Year 2017 (220,000 observations)
 
 ![image](https://user-images.githubusercontent.com/80477575/111401600-943ad780-8697-11eb-869f-f3f8ff0a43d6.png)
-
 
 Stop Year 2018 (290,000+ observations)
 
 ![image](https://user-images.githubusercontent.com/80477575/111401705-cd734780-8697-11eb-8c47-7f0ad7c4587f.png)
 
-Crime Data
+Crime Data (1,000,000+ observations)
 
 ![image](https://user-images.githubusercontent.com/80477575/111401805-fdbae600-8697-11eb-986a-fc163d53a0f8.png)
 
@@ -394,6 +397,6 @@ Crime Data
 
 ### After
 
-[Here](https://github.com/jjomarron/Overall/files/6153105/Collapsed.Crimes.and.Stops.Data-final.xlsx) is the final dataset
+[Here](https://github.com/jjomarron/Overall/files/6153105/Collapsed.Crimes.and.Stops.Data-final.xlsx) is the final dataset (126 observations)
 
 ![image](https://user-images.githubusercontent.com/80477575/111401299-02cb6580-8697-11eb-88d8-8be51f12b324.png)
