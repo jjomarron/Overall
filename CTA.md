@@ -74,7 +74,7 @@ After my testing and consideration of different variables, my final model was th
 
 **𝑅𝑖𝑑𝑒𝑠<sub>𝑡</sub>=𝛽0+𝛽1𝑈𝑏𝑒𝑟<sub>𝑡</sub>+𝛽2𝐿𝑦𝑓𝑡<sub>𝑡</sub>+𝛽3𝑀𝑒𝑑𝑖𝑎𝑛𝐴𝑔𝑒<sub>𝑡</sub>+𝛽4𝑊ℎ𝑖𝑡𝑒𝑃𝑒𝑟𝑐𝑒𝑛𝑡𝑎𝑔𝑒<sub>𝑡</sub>+𝛽5𝑎𝑑𝑗𝐹𝑎𝑟𝑒<sub>𝑡</sub>+𝛽6𝑎𝑑𝑗𝑀𝑒𝑑𝑖𝑎𝑛𝐼𝑛𝑐𝑜𝑚𝑒<sub>𝑡</sub>+𝛽7𝑎𝑑𝑗𝑂𝑝𝑒𝑟𝑎𝑡𝑖𝑛𝑔𝐸𝑥𝑝𝑒𝑛𝑠𝑒𝑠<sub>𝑡</sub>+𝛽8𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛<sub>𝑡</sub>+ε<sub>𝑡</sub>**
 
-The code for this regression is available [here](.md)
+The code for this regression is available [here](CTA Final Regression.md)
 
 ## Hypotheses
 Ultimately, there is a lot that might affect CTA ridership so I considered each variable I included in my regression. Here are my hypotheses for each variable.
