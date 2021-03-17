@@ -3,18 +3,17 @@ This project sought to evaluate the effectiveness of Chicago Police Department's
 
 I will be highlighting certain parts of the code to share particular insights but the full code is available [here](Clean Crime Code.md).
 
-The goal of this cleaning was to end with a dataset that had counts for violent crimes, stops, and demographic data by year and zip code.
+The goal of this cleaning was to end with a dataset that had yearly counts for violent crimes, stops, and demographic data by zip code.
 
 Jump to [Before and After](#before-and-after) comparison.
 
 ## CPD Stops Data
 
-In this section, I cleaned the first year (2016) of stop data. I ended up running nearly the same script for each year so I am only sharing the first year for the sake of conciseness. Ideally, I would have been able to run a loop and shorten my code significantly but due to the messy nature of the data and the overlapping time periods, I had to run the a nearly identical code except for some date changes and different file path names. I believe a loop would be possible especially if I renamed file paths but for the sake of accuracy I decided against running a loop.
-
+In this section, I cleaned the first year (2016) of stop data. I ended up running nearly the same script for each year so I am only sharing the first year for the sake of conciseness. Ideally, I would have been able to run a loop and shorten my code significantly but due to the messy nature of the data and the overlapping time periods, I had to run the a nearly identical code except for some date changes and different file path names. I believe a forvalues loop across year (which I do later) would be possible if I renamed file paths but for the sake of accuracy I decided against it.
 
 I first looked through key data points and found that a fair amount of the information was redacted. Since this information was not available, I had no choice but to drop the observations that were redacted. This was a consideration in our data analysis because a significant percentage of the observations were redacted which might limit the efficacy of our analysis.
 
-I dropped data that had no reported zip code as this information was not useful as it could have happened anywhere in the Chicagoland area. There were two observations without a race variable so I dropped those as well as the impacts were not significant and the missing values might distort our code.
+I dropped data that had no reported zip code since this information was not useful as it could have happened anywhere in the Chicagoland area. There were two observations without a race variable so I dropped those as well as the impacts were not significant on the overall dataset and the missing values would break our code.
 
 Then, I had to convert certain variables from numerical to string. This would allow me to manipulate the strings and understand which block of the city the crimes were occurring. I did that by pulling a substring from the street number and adding "00" to the end of the partially redacted data.
 
@@ -23,9 +22,9 @@ I also cleaned and converted the date variables which were not in the correct fo
 Finally, I had to convert all the categorical variables which were provided in Y/N format. I converted them to the numerical 1/0 format in order to evaluate them in trend or regression analysis. 
 
 
-Skip code to [next comments](#Appending-Loop)
+Skip code to [next comments](#appending-loop)
 
-```ruby
+```stata
 clear
 pause on
 
@@ -241,9 +240,9 @@ save "C:\Users\Jack\Documents\School\Business Analytics.520\Final\Stop Year 2016
 ```
 ## Appending Loop
 
-In this section, I had to combine the Stop Data I had cleaned for 2016, 2017, and 2018 into one complete dataset. I utilized a forvalues loop which appended the code easily and accurately. I generated a count variable so I could easily drop the data in the future when I was matching it with the Crime Data. I then saved this complete Stop Data as separate file.
+In this section, I had to combine the Stop Data I had cleaned for 2016, 2017, and 2018 into one complete dataset. I utilized a forvalues loop which appended the code easily and accurately. I generated a count variable so I could easily drop the data in the future when I was matching it with the Crime Data. I then saved this complete Stop dataset (2016-2018) as a separate file.
 
-```ruby
+```stata
 use "C:\Users\Jack\Documents\School\Business Analytics.520\Final\Stop Year 2016.dta"
 forvalues i = 2017/2018{
 append using "C:\Users\Jack\Documents\School\Business Analytics.520\Final\Stop Year `i'.dta", force
@@ -255,11 +254,11 @@ save "C:\Users\Jack\Documents\School\Business Analytics.520\Final\Stop Year 2016
 
 ## CPD Crime Data
 
-In this section, I used the City of Chicago's Data Portal's Crimes dataset and immediately dropped the majority of the dataset as it was outside of the range that we had stop data for. The crime data did not include the zip code so in order to aggregate crimes by zip code I extracted the address information from the Crime dataset to match that of my Stops dataset. From there, I used a bysort command to match addresses and fill thousands of missing zip codes at once.   
+In this section, I used the City of Chicago's Data Portal's Crimes dataset and immediately dropped the majority of the dataset as it was outside of the range that we had Stop data for. The crime data did not include the zip code so in order to aggregate crimes by zip code I extracted the address information from the Crime dataset to match that of my Stops dataset. From there, I used a bysort command to match addresses and fill thousands of missing zip codes at once.   
 
 I then made a small date adjustment and compiled the crimes which we categorized as violent. From there, I collapsed the data in order to provide us a dataset to perform descriptive statistics on violent crime by year and zip code. We ended up using this for a cluster analysis in SAS.
 
-```ruby
+```stata
 clear
 
 import delimited "C:\Users\Jack\Documents\School\Business Analytics.520\Final\Crimes_-_2001_to_Present.csv", varnames(1) clear
@@ -313,7 +312,7 @@ I first called the complete Stops dataset and collapsed the data to provide us w
 
 After merging the two main datasets, I created a variable that would count the yearly difference between stops, and violent crimes by zip code. I dropped a few outlier zip codes and the final dataset was complete!
 
-```ruby
+```stata
 clear
 
 
@@ -369,10 +368,9 @@ export delimited using "C:\Users\Jack\Documents\School\Business Analytics.520\Fi
 ### Before
 The datasets are too large to share on GitHub directly but are available for public download:
 
-[Here](https://home.chicagopolice.org/statistics-data/isr-data/) for the Stops Data.
+* [Here](https://home.chicagopolice.org/statistics-data/isr-data/) for the Stops Data.
 
-[Here](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2) for the Crime Data.
-
+* [Here](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2) for the Crime Data.
 
 Here are screenshots of the untouched original datasets:
 
