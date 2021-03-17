@@ -5,7 +5,7 @@ Hi everyone, welcome to my GitHub! This is my first attempt at creating a reposi
 My name is Jack Jomarron and I am a Chicago native, George Washington University and DePaul University graduate, and returned Peace Corps Volunteer. I enjoy connecting with people and tinkering with hobby projects both on and offline. I am currently looking to find a career combining my passions for data analysis and public service to help build a better future for my hometown. 
 
 # My Coding Experience
-## STATA (incomplete)
+## STATA
 STATA is my strongest data analysis language, where I have spent the majority of my programming time, as well as where I have completed my most substantial projects. My skillset was developed heavily during my time in my Master's Program where I conducted analyses with Big Data (5,000,000+ observations), panel data, fixed effects, and conducting ARIMA and other time series models. Many thanks to my Professors at DePaul University for the support and guidance during my various research projects. 
 
 **1: [Doors Closing: How Have Rideshares and Demographic Changes Affected CTA Ridership](CTA.md)**
