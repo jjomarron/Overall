@@ -1,4 +1,4 @@
-```ruby
+```stata
 clear
 
 pause on
