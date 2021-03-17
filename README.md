@@ -1,8 +1,12 @@
 Hi everyone, welcome to my GitHub! This is my first attempt at creating a repository where I can share my code, solicit feedback, and hopefully pass on what I have learned with others.
 
-# [About Me](https://www.linkedin.com/in/jackjomarron/)
+# [About Me]
 
 My name is Jack Jomarron and I am a Chicago native, George Washington University and DePaul University graduate, and returned Peace Corps Volunteer. I enjoy connecting with people and tinkering with hobby projects both on and offline. I am currently looking to find a career combining my passions for data analysis and public service to help build a better future for my hometown. 
+
+Check out my resume [here](https://github.com/jjomarron/Overall/files/6154046/Jack.Jomarron.Resume.pdf)!\
+I can be found on [LinkedIn](https://www.linkedin.com/in/jackjomarron/) too.
+
 
 # My Coding Experience
 ## STATA
@@ -25,11 +29,11 @@ Python is the language I have most recently taken up as a hobby to work on perso
 
 **1: [Automate Baseball Lineup and Pitch Count](Auto Lineup + Pitch.md)**
 
-I work part time with a youth baseball team and have been consulting with the coaches on how to develop a lineup and track how many pitches a kid can throw under youth baseball recommended guidelines. This program is designed to allow coaches to spend less time making subjective lineup decisions and more time managing the game and helping the kids perform to their potential.
+I work part time with a youth baseball team and have been consulting with the coaches on how to automatically develop a lineup and track how many pitches a kid can throw under youth baseball recommended guidelines. This program is designed to allow coaches to spend less time making subjective lineup decisions and more time managing the game and helping the kids perform to their potential.
 
 **2: [WebScraping for a Fantasy Soccer League](Fantasy Soccer.md)**
 
-A group of friends and I are in a personally operated Fantasy Soccer League that is conducted over Excel to allow us more flexibility and engagement. However, we all run into periods where updating the numbers for each player takes a long time for our team. Furthermore, independently verifying other teams would be overly cumbersome. This project is in early stages but I am looking to automate the data updates for each team so that we do not have to spend so much time operating on   
+A group of friends and I are in a personally operated Fantasy Soccer League that is conducted over Google Sheets to allow us more flexibility and engagement. However, we all run into ruts when updating our team's statistics for each player takes too long time or we are too busy. Furthermore, independently verifying other teams is barely attempted as it would be overly cumbersome. This project is in early stages but I am automating the data updates for each team so that we do not have to spend so much time manually gathering data and can enjoy the normal banter of the league.
 
 **3: [SMS Trigger for a Python Script](SMS Trigger.md)**
 
@@ -44,18 +48,18 @@ Here is a code I wrote that runs some simple regressions and works on fitting mo
 
 **2: [Clustering Analysis](Cluster Analysis.md)**
 
-This code comes from a homework assignment where I conducted a clustering analysis to help identify subsets of Big Data to eventually apply other analysis methods to discover meaningful conclusions from large datasets.
+This code comes from a homework assignment where I conducted a clustering analysis on consumer/product data. The goal of this project was to practice identifying logical subsets of Big Data to eventually apply other analysis methods to discover meaningful conclusions from large datasets.
 
-## R (incomplete)
+## R
 I learned R in the same graduate level class where I learned SAS. We spent less time on R but again adjusting to the syntax was just a learning curve that I felt comfortable overcoming. I have spent less time on R so I move slower in this language than I do in STATA or SAS but I would love to spend some more time increasing my fluency and take advantage of all that R has to offer.
 
-**1: [Machine Learning](.md)**
+**1: [Neural Networks](Neural Networks.md)**
 
--text-
+Neural Networks is a form of machine learning that seeks to mimic the way the brain operates in order to discover underlying relationships in the data. This code is an introduction to neural networks and how they are created in R. The goal of this project was to select the model that could find the best predictors for those who are delinquent on their loans.
 
-**2: [Regression Analysis](.md)**
+**2: [Regression Analysis](R Regression.md)**
 
--text-
+This regression analysis in R contains binary regressions where I conduct a Linear Probability model, Logistic Regression model, and a Random Forest model. The goal of this short project is to determine which model can most strongly identify the likelihood of a default on mortgage payments.
 
 <!--## Tableau (incomplete)
 Tableau has been super helpful for me in crafting data visualizations particularly within larger data analysis projects that I have worked on. I enrolled in a free online course as an introduction basic Tableau and have then used it start creating visualizations including various different types of graphs, trend lines, and confidence intervals. I worked for the State of Illinois where I was writing weekly reports that required Tableau graphs. While most of the graphs were already set, I did provide input and make minor adjustments as well as learned more about the inner workings of Tableau and the auto-update capabilities. -->
