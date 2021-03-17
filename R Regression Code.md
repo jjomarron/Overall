@@ -1,4 +1,4 @@
-```ruby
+```r
 #ECO 520 HW8
 
 source("http://bigblue.depaul.edu/jlee141/econdata/R/func_lib.R")
