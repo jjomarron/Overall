@@ -1,5 +1,5 @@
 # Regression Analysis
-This code contains various different regression analyses conducted in the R programming language. This was a homework assignment that took the regression analysis skills I had developed in my other classes and applied them to the R language. This code contains Linear Probability Models, Logistic Regression Models, and Random Forest Models.
+This code contains various different regression analyses conducted in the R programming language. This was a homework assignment that took the regression analysis skills I had developed in my other classes and applied them to the R language. This code contains Linear Probability Models, Logistic Regression Models, and Random Forest Models. I also calculate area under the curve and use a confusion matrix to determine the best model.
 
 ## Overview
 This assignment seeks to find the best performing model to determine the likelihood if an individual will default on a Fannie Mae mortgage payment. Questions are bolded and my answers are in bulleted, normal text.
