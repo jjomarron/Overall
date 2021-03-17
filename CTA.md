@@ -2,9 +2,9 @@
 This project was developed in my Public Sector Economics graduate class at DePaul University. Many thanks to Professor Gabriella Bucci for the phenomenal class and especially for helping improve the conciseness of my economic writing.
 
 ## Overview
-This project came out of personal interest for me inspired by a few changes I had witnessed. After two years away in the Peace Corps, I came back to see some of the familiar places I had known and loved in Chicago had been transformed and gentrified. I saw people not as familiar with the transit system as Ubers and Lyfts became more popular. I also was personally affected by cuts to our transit system in high school. I knew these changes were not happening in silos so I wanted to explore the relationship between rideshares, demographics, and Chicago Transit Authority (CTA) ridership as a proxy or initial understanding of how gentrification might be affecting our transit system.
+This project came out of personal interest for me inspired by a few changes I had witnessed. After two years away in the Peace Corps, I came back to see some of the familiar places I had known and loved in Chicago had been transformed and gentrified. I saw more people who were unfamiliar with the transit system all while Ubers and Lyfts became more popular. I also was personally affected by cuts to our transit system while I was in high school. I knew these changes were not happening in silos so I wanted to explore the relationship between rideshares, demographics, and Chicago Transit Authority (CTA) ridership as a proxies or an initial look into how gentrification might be affecting our transit system.
 
-Jump to [Results](#Results)
+Jump to [Results and Takeaways](#Results)
 
 ## Key facts/concepts to know (Tableau graphs to be included later)
 * Real train and bus fares have increased slightly
