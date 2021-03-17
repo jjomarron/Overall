@@ -5,7 +5,7 @@ I will be highlighting certain parts of the code to share particular insights bu
 
 The goal of this cleaning was to end with a dataset that had counts for violent crimes, stops, and demographic data by year and zip code.
 
-Jump to [Before and After](#Before-and-After) comparison.
+Jump to [Before and After](#before-and-after) comparison.
 
 ## CPD Stops Data
 
