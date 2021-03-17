@@ -44,7 +44,7 @@ My experience in SAS comes from a graduate level class where we learned about va
 
 **2: [Clustering Analysis](.md)**
 
--text-   
+This code comes from a homework assignment where I conducted a clustering analysis to help identify subsets of Big Data to eventually apply other analysis methods to discover meaningful conclusions from large datasets.
 
 **3: [Neural Networks](.md)**
 
