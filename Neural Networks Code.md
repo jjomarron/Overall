@@ -84,4 +84,10 @@ auc_plot(pred1f,testy,"NNA")
 auc_plot(pred1g,testy,"NNA")
 auc_plot(pred1h,testy,"NNA")
 par(mfrow=c(1,1)
+
+conf_table(pred1h,testy,"NNA") # Use 30% probability as the cut off
+
+dec_NN <- if else(pred1h > 0.3, 1, 0)
+table(testy,dec_NN)
+
 ```
