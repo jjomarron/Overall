@@ -1,6 +1,6 @@
 Hi everyone, welcome to my GitHub! This is my first attempt at creating a repository where I can share my code, solicit feedback, and hopefully pass on what I have learned with others.
 
-# [About Me]
+# About Me
 
 My name is Jack Jomarron and I am a Chicago native, George Washington University and DePaul University graduate, and returned Peace Corps Volunteer. I enjoy connecting with people and tinkering with hobby projects both on and offline. I am currently looking to find a career combining my passions for data analysis and public service to help build a better future for my hometown. 
 
