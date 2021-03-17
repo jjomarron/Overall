@@ -4,7 +4,7 @@ This page is sharing a homework assignment I completed in my Master's program wh
 
 ## Overview
 
-This assignment was split into 2 parts. They ask to perform the same tasks except across different sections. The first section is based on Customers and the second is based on item purchased. Questions are bolded while my answers can be found in normal text.
+This assignment was split into 2 parts. Both sections ask to perform the same tasks except across different sections. The first section is based on Customers and the second is based on item purchased. Questions are bolded while my answers can be found in normal text.
 
 The original dataset can be found [here](http://bigblue.depaul.edu/jlee141/econdata/eco520/online_retail.csv).
 My code is available [here](Cluster Analysis Code.md).
