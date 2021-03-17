@@ -1,4 +1,4 @@
-```ruby
+```stata
 clear
 capture log using "C:\Users\Jack\Documents\School\Public Sector Economics.516\Research Paper\CTA Project Data_updated.txt", text replace
 
