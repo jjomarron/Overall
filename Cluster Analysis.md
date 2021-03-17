@@ -1,6 +1,6 @@
 # Cluster Analysis
 
-This page is sharing a homework assignment I completed in my Master's program where I conducted a cluster analysis to discern logical groups in Big Data. I really enjoyed learning about the different clustering methods and plan on utilizing this in my future data analysis. By splitting Big Data into smaller datasets, I can draw more tangible conclusions instead of getting lost in all the noise.
+This page is sharing a homework assignment I completed in my Master's program where I conducted a cluster analysis to discern logical groups in Big Data. I really enjoyed learning about the different clustering methods and plan on utilizing this in my future data analysis to help better extract meaningful conclusions from large datasets.
 
 ## Overview
 
