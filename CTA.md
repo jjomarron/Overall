@@ -20,13 +20,13 @@ Jump to [Results and Takeaways](#Results)
 
 * The "death spiral" is a concept in transit literature that identifies a funding/ridership crisis on public transit systems
   * A "death spiral" can occur from a loss of funding, worse service, or a loss of ridership. The three contribute to a hard-to-stop cycle
-    * A loss of riders means less funding. Less funding means worse service. Worse service means less riders. The cycle continues until the system is extremely limited or until an intervention occurs
+    * A loss of riders means less funding. Less funding means worse service. Worse service means less riders. The cycle continues until the system is extremely limited or an intervention occurs
 
 ## Research Question
 My driving research question was: **How have rideshares and demographic changes affected CTA ridership?** After determining those impacts, I also wanted to explore how certain neighborhoods might have been affected in order to understand the shifts in equity behind any of the ridership effects.
 
 ## Data Collection and Cleaning
-For this project, I compiled a unique dataset utilizing the City of Chicago Data Portal, the American Community Survey, and CTA's annual Budget Recommendations. Data collection was more laborious than data cleaning which I will explore in this section. I am planning on suppling my data cleaning code but my STATA license expired so I have to wait to link it. I had intended to use the robust rideshare data that Chicago now collects but unfortunately it did not cover the rise of rideshares in the city. So, instead I used indicator variables for both Uber and Lyft's launch date in Chicago in my regression model.
+For this project, I compiled a unique dataset utilizing the City of Chicago Data Portal, the American Community Survey, and CTA's annual Budget Recommendations. Data collection (which I will explore in this section) was more laborious than data cleaning. I am planning on suppling my data compiling and cleaning code but my STATA license expired so I have to wait to be able to link it. I had also intended to use the robust rideshare data that Chicago now collects but unfortunately it did not cover the rise of rideshares in the city. So, I instead used indicator variables for both Uber and Lyft's launch date in Chicago in my regression model.
 
 ### City of Chicago Data Portal
 The City of Chicago Data Portal's CTA Daily Boarding Totals and L-station Daily Boarding Totals made up the bulk of my dataset. CTA Daily Boarding Totals is an aggregate count of all the rides taken in a day, split between bus and train. This was useful in identifying the difference in effects between train and bus. The L-station Daily Boarding Totals was strictly train rides split by each train station. I grouped the stations by area of the city (more on this split later) to help understand how different parts of the city might have been affected at least by train. Unfortunately, the bus data was not available.
@@ -41,15 +41,15 @@ The CTA releases a Budget Recommendation each year where they record last year's
 ### Initial Model
 After conducting a literature review and considering the aims of my project, my initial regression model was the following:
 
-**𝑅𝑖𝑑𝑒𝑠<sub>𝑡</sub>=𝛽0+𝛽1𝑈𝑏𝑒𝑟<sub>𝑡</sub>+𝛽2𝐿𝑦𝑓𝑡<sub>𝑡</sub>+𝛽3𝑀𝑒𝑑𝑖𝑎𝑛𝐴𝑔𝑒<sub>𝑡</sub>+𝛽4𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛𝑃𝑒𝑟𝑐𝑒𝑛𝑡𝑎𝑔𝑒𝑠<sub>𝑡</sub>+𝛽5𝑎𝑑𝑗𝑇𝑟𝑎𝑖𝑛𝐹𝑎𝑟𝑒<sub>𝑡</sub>+𝛽5𝑎𝑑𝑗𝐵𝑢𝑠𝐹𝑎𝑟𝑒<sub>𝑡</sub>+𝛽6𝑎𝑑𝑗𝑀𝑒𝑑𝑖𝑎𝑛𝐼𝑛𝑐𝑜𝑚𝑒<sub>𝑡</sub>+𝛽7𝑎𝑑𝑗𝑂𝑝𝑒𝑟𝑎𝑡𝑖𝑛𝑔𝐸𝑥𝑝𝑒𝑛𝑠𝑒𝑠<sub>𝑡</sub>+𝛽8𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛<sub>𝑡</sub>+𝛽9𝑑𝑎𝑦𝑡𝑦𝑝𝑒<sub>𝑡</sub>+𝛽9𝑑𝑎𝑦_𝑜𝑓_𝑤𝑒𝑒𝑘<sub>𝑡</sub>+𝛽10𝑚𝑜𝑛𝑡ℎ<sub>𝑡</sub>+𝛽11𝑑𝑎𝑦_𝑜𝑓_𝑚𝑜𝑛𝑡ℎ<sub>𝑡</sub>+ε<sub>𝑡</sub>**
-
-*<sub>Model had three iterations: one with total CTA rides, one with only train, and another with only bus</sub>\
-**<sub>PopulationPercentages are 4 separate variables consisting percentage of Latino, White, Black, and Asian residents </sub>\
-***<sub>All prices (fare, median income, etc.) are in 2019 USD</sub>
+**𝑅𝑖𝑑𝑒𝑠<sub>𝑡</sub>=𝛽0+𝛽1𝑈𝑏𝑒𝑟<sub>𝑡</sub>+𝛽2𝐿𝑦𝑓𝑡<sub>𝑡</sub>+𝛽3𝑀𝑒𝑑𝑖𝑎𝑛𝐴𝑔𝑒<sub>𝑡</sub>+𝛽4𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛𝑃𝑒𝑟𝑐𝑒𝑛𝑡𝑎𝑔𝑒𝑠<sub>𝑡</sub>+𝛽5𝑎𝑑𝑗𝑇𝑟𝑎𝑖𝑛𝐹𝑎𝑟𝑒<sub>𝑡</sub>+𝛽5𝑎𝑑𝑗𝐵𝑢𝑠𝐹𝑎𝑟𝑒<sub>𝑡</sub>+𝛽6𝑎𝑑𝑗𝑀𝑒𝑑𝑖𝑎𝑛𝐼𝑛𝑐𝑜𝑚𝑒<sub>𝑡</sub>+𝛽7𝑎𝑑𝑗𝑂𝑝𝑒𝑟𝑎𝑡𝑖𝑛𝑔𝐸𝑥𝑝𝑒𝑛𝑠𝑒𝑠<sub>𝑡</sub>+𝛽8𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛<sub>𝑡</sub>+𝛽9𝑑𝑎𝑦𝑡𝑦𝑝𝑒<sub>𝑡</sub>+𝛽9𝑑𝑎𝑦_𝑜𝑓_𝑤𝑒𝑒𝑘<sub>𝑡</sub>+𝛽10𝑚𝑜𝑛𝑡ℎ<sub>𝑡</sub>+𝛽11𝑑𝑎𝑦_𝑜𝑓_𝑚𝑜𝑛𝑡ℎ<sub>𝑡</sub>+ε<sub>𝑡</sub>**\
+* <sub>Model had three iterations: one with total CTA rides, one with only train, and another with only bus</sub>\
+** <sub>PopulationPercentages are 4 separate variables consisting percentage of Latino, White, Black, and Asian residents </sub>\
+*** <sub>All prices (fare, median income, etc.) are in 2019 USD</sub>
 
 ### Model Testing
+To test my model specification, I took 35% of the dataset as a sample and conducted standard regression checks.
 #### VIF
-To test my model, I took 35% of the dataset as a sample to test my specification. The initial model showed an extremely Variance Inflation Factor (VIF) which suggests multicollinearity between my independent variables. 
+The initial model showed an extremely Variance Inflation Factor (VIF) which suggests multicollinearity between my independent variables. 
 
 ![image](https://user-images.githubusercontent.com/80477575/111392806-5634b800-8685-11eb-90d1-e36690d3707e.png)
 
@@ -57,13 +57,13 @@ In order to combat this, I conducted a stepwise regression and correlation pairw
 
 ![image](https://user-images.githubusercontent.com/80477575/111395763-9a2abb80-868b-11eb-85d5-8533620405cc.png)
 
-These new VIF numbers are much lower and all under the critical numbers of 10.
+These new VIF numbers are much lower and all under the critical number of 10.
 
 #### Autocorrelation
 I tested for autocorrelation and recorded a Durbin-Watson statistic of 1.57 which suggests slight negative autocorrelation but not enough to be worried about.
 
 #### Goodness of Fit
-Finally, I tested the goodness of fit of my adjusted model on the Total dataset and the Test dataset and found my model was a good fit for the data I had compiled. The Root Mean Squared Errors were close with perhaps a slight overfit but nothing worrisome.
+Finally, I tested the goodness of fit of my adjusted model by calculating the Root Mean Squared Errors on the Total dataset and the Test dataset. I found that my model specification was a good fit for the data I was analyzing. The difference in the Root Mean Squared Errors between the Total and Test datasets were close with perhaps a slight overfit but nothing worrisome.
 
 ![image](https://user-images.githubusercontent.com/80477575/111393871-97c66280-8687-11eb-831c-b246e53f028e.png)
 
@@ -77,7 +77,7 @@ The code for this regression is available [here](CTA Final Regression.md)
 ## Hypotheses
 Ultimately, there is a lot that might affect CTA ridership so I considered each variable I included in my regression. Here are my hypotheses for each variable.
 
-* **Uber/Lyft** - Rideshares have both complementary and substitution effects on transit. Rideshare advocates say they provide final connections and can enhance existing transit infrastructure. Critics claim that rideshares are pulling away riders and putting transit systems in threat of the death spiral. I believe in Chicago's case, the substitution effect will outweigh its complement and cause a decrease in Uber/Lyft.
+* **Uber/Lyft** - Rideshares have both complementary and substitution effects on transit. Rideshare advocates say they provide final connections and can enhance existing transit infrastructure. Critics claim that rideshares are pulling away riders and putting transit systems in threat of the "death spiral". I believe in Chicago's case, the substitution effect will outweigh its complement and cause a decrease in Uber/Lyft.
 * **Median Age** - Older Chicagoans are less likely to be acclimated to rideshare companies so I believe a younger Chicago would cause a decrease in CTA rides as they are more familiar with the technology. Also, the young workforce that is moving to Chicago is not as familiar with the CTA and might prefer to use rideshares than adjust to our transit system. 
 * **White Percentage** - CTA's core riders are minorities so I would expect an increase in the share of white Chicagoans to reflect a severe negative adjustment in CTA rides.
 * **Adjusted Bus Fare** - As bus fare increases, I would expect less riders as people might transition to other forms of transportation (walking, bikes, cars, etc.). One exception to this might be if the fares are well spent and result in higher quality service which should be captured by the Adjusted Operating Expenses. 
@@ -89,9 +89,9 @@ Ultimately, there is a lot that might affect CTA ridership so I considered each 
 
 ### Bus and Train
 
-From the initial regression output below, we can identify a few interesting points:
+From the regression output below, we can identify a few interesting points:
 
-* As the percentage of the white population increased by 1%, we saw total daily ridership decline by almost 75,000 (about 5%).
+* As the percentage of the white population increases by 1%, total daily ridership declines by almost 75,000 (about 5%).
   * This was particularly acute on the bus where the majority of the 5% loss of riders occurred
 * The introduction of rideshares had a net decrease in daily ridership totals of about 30,000 rides (around 2%)
 * The other variables more or less coincided with existing literature and my own hypotheses.
@@ -112,13 +112,13 @@ These results come from a similar model to the previous section except this time
  
 ## Takeaways
 
-This project highlights the familiar story of how the same occurence does not impact all Chicagoans equally. According to the results, rideshares and the increased white population are causing a crisis-level decline in daily bus rides (~15%). While trains are managing a modest increase, the hit to bus rides is worrisome as it portends a "death spiral" if the fares collected keep declining. Furthermore, while we see downtown and its surrounding neighborhoods (as well as its predominantly white ones) benefit from rideshares and increased ridership, it is Chicago's West and South sides that are losing train riders. 
+This project highlights the familiar story of how the same occurence does not impact all Chicagoans equally. According to the results, rideshares and the increasing white population are causing a crisis-level decline in daily bus rides (~15%) which is dragging down overall ridership as well (~9%). While trains are managing a modest increase, the hit to bus rides is worrisome as it portends a "death spiral" if the fares collected keep declining. Furthermore, while we see downtown and its surrounding neighborhoods (as well as its predominantly white ones) benefit from rideshares and increased ridership, it is Chicago's West and South sides that are losing train riders and being left behind. 
 
-Beyond just identifying where and what trends exist in relation to CTA ridership, these results call in to question policy choices that are external to public transportation. Since Rahm Emanuel became mayor, the city has catered more and more to business interests and young, urban professionals. This pro-business drive has undoubtedly contributed to a demographic shift in the city that has resulted in more white professionals who are generally more comfortable taking an Uber than they are riding the CTA. In order to correctly evaluate development decisions and gentrification, it is imperative that the city considers the public transit impacts as well. 
+Beyond just identifying where and what trends exist in relation to CTA ridership, these results call in to question policy choices that are deemed external to public transportation. Over the last decade, the city of Chicago has catered more and more to business interests and young, urban professionals. This pro-business drive has undoubtedly contributed to a demographic shift in the city that has resulted in more white professionals who are generally more comfortable taking an Uber than they are riding the CTA. In order to correctly evaluate development decisions and gentrification, it is imperative that the city considers the public transit impacts as well. 
 
 ## Gaps and Further Questions
 
-To further improve on my research, I identified the following areas where gaps existed or required further questions
+To further improve on my research, I identified the following areas where gaps existed or required further questioning
 
 * There is a lack of tracking crime data on the CTA which could affect rider sentiment and ridership numbers
 * Rideshare regressors are just indicator variables
