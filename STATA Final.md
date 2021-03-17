@@ -5,7 +5,7 @@ This is a copy of my final I completed for my graduate Econometrics course. The 
 
 The dataset was relatively simple consisting of the Dow Jones closing price, month, day, year, and day of week variables. It also included the number of reported Covid-19 cases in China and the number of reported Covid-19 cases in the rest of the world. The range of the dataset was from March 14,2019 to March 13, 2020)
 
-My STATA code is available [here](Stata Final Code.md).
+My STATA code is available [here](STATA Final Code.md).
 
 ## Time Series Analysis
 **1. Plot the closing price over the past year using a created time variable.**
