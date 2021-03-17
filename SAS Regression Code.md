@@ -1,4 +1,4 @@
-```ruby
+```sas
 filename webdat url "http://bigblue.depaul.edu/jlee141/econdata/eco520/airbnb2019.csv" ;
 
 /* Import Chicago Community data*/
