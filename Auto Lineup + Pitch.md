@@ -177,5 +177,5 @@ textfile.close()
 ## Moving Forward
 * I need to globalize this code for each of our ~10 teams
 * I need to make sure the file path naming conventions are consistent
-* I need to create a way to schedule this to run nightly in order to save locally (for why see: [SMS Trigger](SMS Trigger.md)
+* I need to create a way to schedule this to run nightly in order to save locally (for why see: [SMS Trigger](SMS Trigger.md))
 * The code is a little long. There might be ways for me to shorten this and be better with coding conventions
