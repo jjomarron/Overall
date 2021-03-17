@@ -33,8 +33,9 @@ The CTA releases a Budget Recommendation each year where they record last year's
 ### Seasonality
 It is well documented and apparent that transit has seasonal and weekly changes. Weekdays bring more riders as do the summer months. In order to account for this, I conducted a preliminary regression that removed the seasonality components. This allowed me to run a regression considering purely non-seasonal variables. 
 
-The data cleaning code is available [here](.md) 
-The seasonality adjusting is [here](.md)
+The data cleaning code is available [here](.md).
+
+The seasonality adjusting code is [here](.md).
 
 ## Model
 ### Initial Model
