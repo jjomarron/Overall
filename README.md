@@ -16,9 +16,9 @@ My most substantial project was a research paper evaluating how rideshares (Uber
 
 This example is how I cleaned and compiled various datasets used in a final project during my Master's program. My research partners and I were evaluating the effectiveness of the Chicago Police Department's stops on the amount of crimes on a neighborhood. I took point on cleaning and compiling the datasets so we could conduct machine learning and other more advanced analysis in R. This was cleaning included datasets from Chicago Police Department and the City of Chicago's Data Portal.
 
-**3: [Time Series and ARIMA models](.md)**
+**3: [Time Series and ARIMA models](STATA Final.md)**
 
--text-
+This code is the one I used for a final exam in my graduate Econometrics II class. The test was designed to call on and combine all the skills I had learned regarding time series and panel data over the quarter. I earned an A for my work on this final.
 
 ## Python
 Python is the language I have most recently taken up as a hobby to work on personal projects. As of now, it is my favorite programming language for the variety and breadth it provides. I am relatively self-taught utilizing Automate the Boring Stuff, Stack Overflow, and Reddit forums for the bulk of my education. As of now, I have experience with Pandas, web scraping, file path manipulation, loops, try/for exceptions, and setting up webhooks for a SMS trigger. I appreciate any feedback on my Python codes especially on how I might be able to shorten their run times.
