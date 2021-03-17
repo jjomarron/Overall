@@ -6,7 +6,7 @@ This project came out of personal interest for me inspired by a few changes I ha
 
 Jump to [Results and Takeaways](#results)
 
-## Key facts/concepts to know (Tableau graphs to be included later)
+## Key facts/concepts to know
 * Real train and bus fares have increased slightly
 * Real median income trended sharply down after the 2009 crisis but has recovered somewhat
   ![image](https://user-images.githubusercontent.com/80477575/111406876-082dad80-86a1-11eb-83d4-25f7845192f4.png)
