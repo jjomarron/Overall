@@ -9,7 +9,7 @@ At first, I had wanted to my Twilio number to receive a SMS, trigger the code, a
 
 ## Code
 Here is my working code which accesses a locally saved file and quickly sends a game ready lineup and pitcher information to the coach. 
-```
+```python
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 from pathlib import Path
