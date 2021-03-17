@@ -7,11 +7,17 @@ This project came out of personal interest for me inspired by a few changes I ha
 Jump to [Results](#Takeaways)
 
 ## Key facts/concepts to know (Tableau graphs to be included later)
-* Real median income has trended down in Chicago over the last 20 years
+* Real train and bus fares have increased slightly
+* Real median income trended sharply down after the 2009 crisis but has recovered somewhat
+  ![image](https://user-images.githubusercontent.com/80477575/111406876-082dad80-86a1-11eb-83d4-25f7845192f4.png)
 * Chicago's Black population has decreased substantially since 2000
   * CTA claimed in 2009 that 60% of their ridership identifies as a minority
   * Latino, White, and Asian populations are growing their shares of the total population
+    ![image](https://user-images.githubusercontent.com/80477575/111406649-aa996100-86a0-11eb-898e-bc094afe61b5.png)
 * Real operating expenses have increased steadily since 2006
+
+![image](https://user-images.githubusercontent.com/80477575/111406726-cac92000-86a0-11eb-81c5-4a98169670cc.png)
+
 * The "death spiral" is a concept in transit literature that identifies a funding/ridership crisis on public transit systems
   * A "death spiral" can occur from a loss of funding, worse service, or a loss of ridership. The three contribute to a hard-to-stop cycle
     * A loss of riders means less funding. Less funding means worse service. Worse service means less riders. The cycle continues until the system is extremely limited or until an intervention occurs
@@ -20,7 +26,7 @@ Jump to [Results](#Takeaways)
 My driving research question was: **How have rideshares and demographic changes affected CTA ridership?** After determining those impacts, I also wanted to explore how certain neighborhoods might have been affected in order to understand the shifts in equity behind any of the ridership effects.
 
 ## Data Collection and Cleaning
-For this project, I compiled a unique dataset utilizing the City of Chicago Data Portal, the American Community Survey, and CTA's annual Budget Recommendations. Data collection was more laborious than data cleaning which I will explore in this section. My data cleaning and compilation codes are available at the end of this section. I had intended to use the robust rideshare data that Chicago now collects but unfortunately it did not cover the rise of rideshares in the city. So, instead I used indicator variables for both Uber and Lyft's launch date in Chicago in my regression model.
+For this project, I compiled a unique dataset utilizing the City of Chicago Data Portal, the American Community Survey, and CTA's annual Budget Recommendations. Data collection was more laborious than data cleaning which I will explore in this section. I am planning on suppling my data cleaning code but my STATA license expired so I have to wait to link it. I had intended to use the robust rideshare data that Chicago now collects but unfortunately it did not cover the rise of rideshares in the city. So, instead I used indicator variables for both Uber and Lyft's launch date in Chicago in my regression model.
 
 ### City of Chicago Data Portal
 The City of Chicago Data Portal's CTA Daily Boarding Totals and L-station Daily Boarding Totals made up the bulk of my dataset. CTA Daily Boarding Totals is an aggregate count of all the rides taken in a day, split between bus and train. This was useful in identifying the difference in effects between train and bus. The L-station Daily Boarding Totals was strictly train rides split by each train station. I grouped the stations by area of the city (more on this split later) to help understand how different parts of the city might have been affected at least by train. Unfortunately, the bus data was not available.
@@ -31,35 +37,25 @@ The American Community Survey (ACS) provided me with valuable demographic data a
 ### CTA Budget Recommendation
 The CTA releases a Budget Recommendation each year where they record last year's final budget. I used these reports to populate the annual operating expenses as a proxy for quality and commitment to sound transit service.
 
-### Seasonality
-It is well documented and apparent that transit has seasonal and weekly changes. Weekdays bring more riders as do the summer months. In order to account for this, I conducted a preliminary regression that removed the seasonality components. This allowed me to run a regression considering purely non-seasonal variables. 
-
-The data cleaning code is available [here](.md).
-
-The seasonality adjusting code is [here](.md).
-
 ## Model
 ### Initial Model
 After conducting a literature review and considering the aims of my project, my initial regression model was the following:
 
 **𝑅𝑖𝑑𝑒𝑠<sub>𝑡</sub>=𝛽0+𝛽1𝑈𝑏𝑒𝑟<sub>𝑡</sub>+𝛽2𝐿𝑦𝑓𝑡<sub>𝑡</sub>+𝛽3𝑀𝑒𝑑𝑖𝑎𝑛𝐴𝑔𝑒<sub>𝑡</sub>+𝛽4𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛𝑃𝑒𝑟𝑐𝑒𝑛𝑡𝑎𝑔𝑒𝑠<sub>𝑡</sub>+𝛽5𝑎𝑑𝑗𝑇𝑟𝑎𝑖𝑛𝐹𝑎𝑟𝑒<sub>𝑡</sub>+𝛽5𝑎𝑑𝑗𝐵𝑢𝑠𝐹𝑎𝑟𝑒<sub>𝑡</sub>+𝛽6𝑎𝑑𝑗𝑀𝑒𝑑𝑖𝑎𝑛𝐼𝑛𝑐𝑜𝑚𝑒<sub>𝑡</sub>+𝛽7𝑎𝑑𝑗𝑂𝑝𝑒𝑟𝑎𝑡𝑖𝑛𝑔𝐸𝑥𝑝𝑒𝑛𝑠𝑒𝑠<sub>𝑡</sub>+𝛽8𝑃𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛<sub>𝑡</sub>+𝛽9𝑑𝑎𝑦𝑡𝑦𝑝𝑒<sub>𝑡</sub>+𝛽9𝑑𝑎𝑦_𝑜𝑓_𝑤𝑒𝑒𝑘<sub>𝑡</sub>+𝛽10𝑚𝑜𝑛𝑡ℎ<sub>𝑡</sub>+𝛽11𝑑𝑎𝑦_𝑜𝑓_𝑚𝑜𝑛𝑡ℎ<sub>𝑡</sub>+ε<sub>𝑡</sub>**
 
-*<sub>Model had three iterations: one with total CTA rides, one with only train, and another with only bus</sub>
-
-**<sub>PopulationPercentages are 4 separate variables consisting percentage of Latino, White, Black, and Asian residents </sub>
-
+*<sub>Model had three iterations: one with total CTA rides, one with only train, and another with only bus</sub>\
+**<sub>PopulationPercentages are 4 separate variables consisting percentage of Latino, White, Black, and Asian residents </sub>\
 ***<sub>All prices (fare, median income, etc.) are in 2019 USD</sub>
 
 ### Model Testing
 #### VIF
-To test my model, I took 25% of the dataset as a sample to test my specification. The initial model showed an extremely Variance Inflation Factor (VIF) which suggests multicollinearity between my independent variables. 
+To test my model, I took 35% of the dataset as a sample to test my specification. The initial model showed an extremely Variance Inflation Factor (VIF) which suggests multicollinearity between my independent variables. 
 
 ![image](https://user-images.githubusercontent.com/80477575/111392806-5634b800-8685-11eb-90d1-e36690d3707e.png)
 
 In order to combat this, I conducted a stepwise regression and correlation pairwise. I decided to drop day of the week and train fare as they heavily correlated with day type and bus fare, respectively. I still had issues with multicollinearity with bus fare so I took the first difference. There was also obvious issues including all the percentages of the population so I kept the white percentage of the population as the variable to evaluate regarding demographic change.
 
 ![image](https://user-images.githubusercontent.com/80477575/111395763-9a2abb80-868b-11eb-85d5-8533620405cc.png)
-
 
 These new VIF numbers are much lower and all under the critical numbers of 10.
 
